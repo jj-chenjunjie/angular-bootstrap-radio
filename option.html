@@ -1,0 +1,9 @@
+<div>
+	<label ng-if="type === 'radio'" class="radio-inline" ng-repeat="(key, value) in data">
+		<input type="radio" name="{{name}}" ng-model="ngModel" ng-value="key" ng-click="click(key)"/>{{value}}
+	</label>
+	<label ng-if="type === 'checkbox'" class="checkbox-inline" ng-repeat="(key, value) in data">
+		<input type="checkbox" name="{{name}}" ng-model="ngModel[$index]" ng-true-value="{{key}}" ng-false-value="{{-key}}" ng-change="change($index)"/>{{value}}
+	</label>
+	<!-- <button type="button">haha</button> -->
+</div>
